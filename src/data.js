@@ -223,3 +223,12 @@ export const tableData = [
     occupation: "CEO",
   },
 ];
+
+export const dices = [
+  { value: 1, shape: [0, 0, 0, 0, 1, 0, 0, 0, 0] },
+  { value: 2, shape: [1, 0, 0, 0, 0, 0, 0, 0, 1] },
+  { value: 3, shape: [1, 0, 0, 0, 1, 0, 0, 0, 1] },
+  { value: 4, shape: [1, 0, 1, 0, 0, 0, 1, 0, 1] },
+  { value: 5, shape: [1, 0, 1, 0, 1, 0, 1, 0, 1] },
+  { value: 6, shape: [1, 0, 1, 1, 0, 1, 1, 0, 1] },
+];
