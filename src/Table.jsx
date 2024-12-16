@@ -15,6 +15,7 @@ export const Table = () => {
 
   return (
     <>
+      <h2 className="text-3xl text-orange-200 my-8">Table Pagination</h2>
       <table>
         <thead>
           <tr>
@@ -34,10 +35,11 @@ export const Table = () => {
           ))}
         </tbody>
       </table>
-      <div className="bg-orange-500">
+      <div className="bg-transparent rounded-xl border pr-1">
         <button
           disabled={page === 0}
           onClick={() => setPage((page) => page - 1)}
+          className="hover:text-amber-400"
         >
           {"<"}
         </button>
@@ -51,11 +53,12 @@ export const Table = () => {
             page === Math.ceil(tableData.length / perPage) - 1
           }
           onClick={() => setPage((page) => page + 1)}
+          className="hover:text-amber-400"
         >
           {">"}
         </button>
         <select
-          className="text-black bg-orange-500"
+          className=" bg-[darkslategrey] hover:text-amber-400"
           value={perPage}
           onChange={handleChange}
         >

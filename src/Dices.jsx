@@ -3,7 +3,7 @@ import { dices } from "./data";
 import { useEffect, useState } from "react";
 
 export const Dices = () => {
-  const [dicesQty, setDicesQty] = useState(2);
+  const [dicesQty, setDicesQty] = useState(3);
 
   const getRandomSide = () => Math.ceil(Math.random() * 6);
   const setDices = () => {
@@ -42,6 +42,7 @@ export const Dices = () => {
 
   return (
     <>
+      <h2 className="text-3xl text-orange-200 mt-8">Dices Game</h2>
       <div className="grid grid-cols-3 gap-4 my-10">
         {result?.map((dice, idx) => (
           <div

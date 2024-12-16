@@ -48,7 +48,11 @@ const Folder = ({ item }) => {
             .sort(compareNames)
             .sort(compareType)
             .map((el) =>
-              el.children ? <Folder item={el} /> : <File item={el} />
+              el.children ? (
+                <Folder key={el.id} item={el} />
+              ) : (
+                <File key={el.id} item={el} />
+              )
             )}
         </ul>
       )}
@@ -65,7 +69,11 @@ export const FileExplorer = () => {
           .sort(compareNames)
           .sort(compareType)
           .map((el) =>
-            el.children ? <Folder item={el} /> : <File item={el} />
+            el.children ? (
+              <Folder key={el.id} item={el} />
+            ) : (
+              <File key={el.id} item={el} />
+            )
           )}
       </ul>
     </div>
