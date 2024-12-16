@@ -1,6 +1,7 @@
 import "./App.css";
 import { Dices } from "./Dices";
 import { FileExplorer } from "./FileExplorer";
+import { LikeBtn } from "./LikeBtn";
 import { Table } from "./Table";
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <Table />
       <Dices />
       <FileExplorer />
+      <LikeBtn />
     </div>
   );
 }
