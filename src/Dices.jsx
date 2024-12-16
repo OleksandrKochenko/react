@@ -3,9 +3,25 @@ import { dices } from "./data";
 import { useEffect, useState } from "react";
 
 export const Dices = () => {
+  const [dicesQty, setDicesQty] = useState(2);
+
   const getRandomSide = () => Math.ceil(Math.random() * 6);
-  const [result, setResult] = useState([1, 2, 3, 4, 5, 6]);
+  const setDices = () => {
+    const dicesSet = [];
+    for (let index = 0; index < dicesQty; index++) {
+      dicesSet.push(getRandomSide());
+    }
+    return dicesSet;
+  };
+
+  const [result, setResult] = useState(null);
   const [isRolling, setIsRolling] = useState(false);
+
+  useEffect(() => {
+    const currentDices = setDices();
+    setResult(currentDices);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [dicesQty]);
 
   let timeoutId;
   const handleClick = () => {
@@ -25,32 +41,47 @@ export const Dices = () => {
   }, [result]);
 
   return (
-    <div className="grid grid-cols-3 gap-4 my-10">
-      {result.map((dice, idx) => (
-        <div
-          key={idx}
-          className={`h-20 w-20 p-2 grid grid-cols-3 border rounded-xl ${
-            isRolling && "animate-spin"
-          }`}
-        >
-          {dices
-            .find((el) => el.value === dice)
-            .shape.map((el, idx) => (
-              <div key={idx} className="flex items-center justify-center">
-                {!!el && <Icon icon="ic:twotone-circle" className="text-xl" />}
-              </div>
-            ))}
-        </div>
-      ))}
+    <>
+      <div className="grid grid-cols-3 gap-4 my-10">
+        {result?.map((dice, idx) => (
+          <div
+            key={idx}
+            className={`h-20 w-20 p-2 grid grid-cols-3 border rounded-xl ${
+              isRolling && "animate-spin"
+            }`}
+          >
+            {dices
+              .find((el) => el.value === dice)
+              .shape.map((el, idx) => (
+                <div key={idx} className="flex items-center justify-center">
+                  {!!el && (
+                    <Icon icon="ic:twotone-circle" className="text-xl" />
+                  )}
+                </div>
+              ))}
+          </div>
+        ))}
+      </div>
       <div>
-        <div>Result: {result.reduce((acc, curr) => acc + curr, 0)}</div>
+        <div>Result: {result?.reduce((acc, curr) => acc + curr, 0)}</div>
         <button
-          className="border rounded-xl p-2 my-2 w-20"
+          className="border rounded-xl p-2 my-2 mx-4 w-20"
           onClick={handleClick}
         >
           Roll
         </button>
+        <select
+          value={dicesQty}
+          className="border rounded-xl mx-4 w-20 p-2 bg-transparent text-center"
+          onChange={(e) => setDicesQty(e.target.value)}
+        >
+          <option value={2}>2</option>
+          <option value={3}>3</option>
+          <option value={4}>4</option>
+          <option value={5}>5</option>
+          <option value={6}>6</option>
+        </select>
       </div>
-    </div>
+    </>
   );
 };
