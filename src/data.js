@@ -1,3 +1,4 @@
+// Table Data
 export const headerData = [
   { label: "ID", key: "id" },
   { label: "Name", key: "name" },
@@ -224,6 +225,7 @@ export const tableData = [
   },
 ];
 
+// Dices Data
 export const dices = [
   { value: 1, shape: [0, 0, 0, 0, 1, 0, 0, 0, 0] },
   { value: 2, shape: [1, 0, 0, 0, 0, 0, 0, 0, 1] },
@@ -231,4 +233,67 @@ export const dices = [
   { value: 4, shape: [1, 0, 1, 0, 0, 0, 1, 0, 1] },
   { value: 5, shape: [1, 0, 1, 0, 1, 0, 1, 0, 1] },
   { value: 6, shape: [1, 0, 1, 1, 0, 1, 1, 0, 1] },
+];
+
+// File Explorer Data
+export const fileExplorer = [
+  {
+    id: 1,
+    name: "README.md",
+  },
+  {
+    id: 2,
+    name: "Documents",
+    children: [
+      {
+        id: 3,
+        name: "Word.doc",
+      },
+      {
+        id: 4,
+        name: "Powerpoint.ppt",
+      },
+    ],
+  },
+  {
+    id: 5,
+    name: "Downloads",
+    children: [
+      {
+        id: 6,
+        name: "unnamed.txt",
+      },
+      {
+        id: 7,
+        name: "Misc",
+        children: [
+          {
+            id: 8,
+            name: "foo.txt",
+          },
+          {
+            id: 9,
+            name: "bar.txt",
+          },
+        ],
+      },
+    ],
+  },
+  { id: 10, name: "New Folder", children: [] },
+  {
+    id: 11,
+    name: "src",
+
+    children: [
+      {
+        name: "main.jsx",
+        id: 12,
+      },
+      {
+        name: "utils.js",
+        id: 13,
+      },
+      { id: 14, name: "components", children: [{ id: 15, name: "page.jsx" }] },
+    ],
+  },
 ];

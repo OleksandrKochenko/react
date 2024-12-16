@@ -1,5 +1,6 @@
 import "./App.css";
 import { Dices } from "./Dices";
+import { FileExplorer } from "./FileExplorer";
 import { Table } from "./Table";
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
       <Table />
       <Dices />
+      <FileExplorer />
     </div>
   );
 }
