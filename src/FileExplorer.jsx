@@ -62,8 +62,8 @@ const Folder = ({ item }) => {
 
 export const FileExplorer = () => {
   return (
-    <div className="my-8">
-      <h2 className="text-3xl text-orange-200">File Explorer</h2>
+    <div>
+      <h2 className="text-3xl text-orange-200 my-8">File Explorer</h2>
       <ul className="my-4">
         {fileExplorer
           .sort(compareNames)

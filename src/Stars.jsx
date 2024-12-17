@@ -7,8 +7,8 @@ export const Stars = () => {
   const [ratingHover, setRatingHover] = useState(0);
 
   return (
-    <div className="my-8">
-      <h2 className="text-3xl text-orange-200">Rating Stars</h2>
+    <div>
+      <h2 className="text-3xl text-orange-200 my-8 mt-10">Rating Stars</h2>
       <ul className="my-4 flex">
         {stars.map((el) => (
           <li

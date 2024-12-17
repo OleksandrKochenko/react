@@ -66,14 +66,14 @@ export const Dices = () => {
       <div>
         <div>Result: {result?.reduce((acc, curr) => acc + curr, 0)}</div>
         <button
-          className="border rounded-xl p-2 my-2 mx-4 w-20"
+          className="border rounded-xl p-2 my-2 mx-4 w-20 hover:text-amber-400"
           onClick={handleClick}
         >
           Roll
         </button>
         <select
           value={dicesQty}
-          className="border rounded-xl mx-4 w-20 p-2 bg-transparent text-center"
+          className="border rounded-xl mx-4 w-20 p-2 bg-[darkslategray] text-center hover:text-amber-400 "
           onChange={(e) => setDicesQty(e.target.value)}
         >
           <option value={2}>2</option>

@@ -1,4 +1,5 @@
 import "./App.css";
+import { Devider } from "./Devider_";
 import { Dices } from "./Dices";
 import { FileExplorer } from "./FileExplorer";
 import { LikeBtn } from "./LikeBtn";
@@ -9,10 +10,15 @@ function App() {
   return (
     <div className="App">
       <Table />
+      <Devider />
       <Dices />
+      <Devider />
       <FileExplorer />
+      <Devider />
       <LikeBtn />
+      <Devider />
       <Stars />
+      <Devider />
     </div>
   );
 }

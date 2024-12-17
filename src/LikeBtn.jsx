@@ -24,9 +24,12 @@ export const LikeBtn = () => {
   };
 
   return (
-    <div>
+    <div className="flex flex-col items-center">
       <h2 className="text-3xl text-orange-200 my-8">Like Button</h2>
-      {errorMsg && <p className="py-2 text-red-400">{errorMsg}</p>}
+      <p className="my-4">
+        The request is made to the back end API which has a 50% chance to
+        succeeding / failing (error message shall appear)
+      </p>
       <button
         onClick={() => fetchLike(!isLiked ? "like" : "unlike")}
         className={`flex items-center rounded-lg border px-4 text-xl ${
@@ -43,6 +46,7 @@ export const LikeBtn = () => {
         />{" "}
         <span>{isLiked ? "Unlike" : "Like"}</span>
       </button>
+      {errorMsg && <p className="py-2 text-red-400">{errorMsg}</p>}
     </div>
   );
 };
