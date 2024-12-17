@@ -297,3 +297,11 @@ export const fileExplorer = [
     ],
   },
 ];
+
+export const stars = [
+  { id: 1, filled: "line-md:star-filled", outlined: "line-md:star" },
+  { id: 2, filled: "line-md:star-filled", outlined: "line-md:star" },
+  { id: 3, filled: "line-md:star-filled", outlined: "line-md:star" },
+  { id: 4, filled: "line-md:star-filled", outlined: "line-md:star" },
+  { id: 5, filled: "line-md:star-filled", outlined: "line-md:star" },
+];

@@ -2,6 +2,7 @@ import "./App.css";
 import { Dices } from "./Dices";
 import { FileExplorer } from "./FileExplorer";
 import { LikeBtn } from "./LikeBtn";
+import { Stars } from "./Stars";
 import { Table } from "./Table";
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <Dices />
       <FileExplorer />
       <LikeBtn />
+      <Stars />
     </div>
   );
 }

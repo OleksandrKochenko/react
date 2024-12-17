@@ -29,9 +29,11 @@ export const LikeBtn = () => {
       {errorMsg && <p className="py-2 text-red-400">{errorMsg}</p>}
       <button
         onClick={() => fetchLike(!isLiked ? "like" : "unlike")}
-        className={`flex items-center rounded-lg border px-4 text-xl hover:text-amber-400 hover:border-amber-400 hover:bg-transparent ${
-          isLiked && "bg-amber-400 border-amber-400 text-white"
-        }`}
+        className={`flex items-center rounded-lg border px-4 text-xl ${
+          isLiked
+            ? "hover:text-white hover:border-white hover:bg-amber-400"
+            : "hover:text-amber-400 hover:border-amber-400 hover:bg-transparent"
+        }    ${isLiked && "bg-amber-400 border-amber-400 text-white"}`}
       >
         <Icon
           icon={
