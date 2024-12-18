@@ -6,6 +6,7 @@ import { Stars } from "./Stars";
 import { Table } from "./Table";
 import { Header } from "./Header";
 import { TrafficLite } from "./TrafficLite";
+import { DigitalClock } from "./DigitalClock";
 
 import "./App.css";
 
@@ -24,6 +25,8 @@ function App() {
       <Stars />
       <Divider />
       <TrafficLite />
+      <Divider />
+      <DigitalClock />
       <Divider />
     </div>
   );

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export const TrafficLite = () => {
-  const [light, setLight] = useState("red");
+  const [light, setLight] = useState("");
 
   useEffect(() => {
     let redTimeOut;

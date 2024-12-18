@@ -305,3 +305,16 @@ export const stars = [
   { id: 4, filled: "line-md:star-filled", outlined: "line-md:star" },
   { id: 5, filled: "line-md:star-filled", outlined: "line-md:star" },
 ];
+
+export const digitalChars = [
+  { number: 0, characters: "abcdef" },
+  { number: 1, characters: "ab" },
+  { number: 2, characters: "acdfg" },
+  { number: 3, characters: "abcfg" },
+  { number: 4, characters: "abeg" },
+  { number: 5, characters: "bcefg" },
+  { number: 6, characters: "bcdefg" },
+  { number: 7, characters: "abf" },
+  { number: 8, characters: "abcdefg" },
+  { number: 9, characters: "abcefg" },
+];
