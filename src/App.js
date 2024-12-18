@@ -1,28 +1,30 @@
-import { Devider } from "./Devider_";
+import { Divider } from "./Divider";
 import { Dices } from "./Dices";
 import { FileExplorer } from "./FileExplorer";
 import { LikeBtn } from "./LikeBtn";
 import { Stars } from "./Stars";
 import { Table } from "./Table";
 import { Header } from "./Header";
-import "./App.css";
 import { TrafficLite } from "./TrafficLite";
+
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
       <Header />
       <Table />
-      <Devider />
+      <Divider />
       <Dices />
-      <Devider />
+      <Divider />
       <FileExplorer />
-      <Devider />
+      <Divider />
       <LikeBtn />
-      <Devider />
+      <Divider />
       <Stars />
-      <Devider />
+      <Divider />
       <TrafficLite />
+      <Divider />
     </div>
   );
 }

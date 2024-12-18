@@ -1,6 +1,6 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 
-export const Devider = () => {
+export const Divider = () => {
   return (
     <div className="w-full flex items-center justify-center py-3">
       <div className="w-1/4">
