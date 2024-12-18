@@ -6,6 +6,7 @@ import { Stars } from "./Stars";
 import { Table } from "./Table";
 import { Header } from "./Header";
 import "./App.css";
+import { TrafficLite } from "./TrafficLite";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Devider />
       <Stars />
       <Devider />
+      <TrafficLite />
     </div>
   );
 }
