@@ -7,6 +7,7 @@ import { Table } from "./Table";
 import { Header } from "./Header";
 import { TrafficLite } from "./TrafficLite";
 import { DigitalClock } from "./DigitalClock";
+import { TicTacToe } from "./TicTacToe";
 
 import "./App.css";
 
@@ -27,6 +28,8 @@ function App() {
       <TrafficLite />
       <Divider />
       <DigitalClock />
+      <Divider />
+      <TicTacToe />
       <Divider />
     </div>
   );
