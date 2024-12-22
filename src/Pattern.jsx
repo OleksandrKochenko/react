@@ -1,17 +1,19 @@
 import { useState } from "react";
 import { ambroidery, patternField } from "./data";
+import SvgGenerator from "./SvgGenerator";
 
 export const Pattern = () => {
   const fieldString = JSON.stringify(ambroidery);
 
   const [fieldArray, setFieldArray] = useState(JSON.parse(fieldString));
+  const [showPattern, setShowPattern] = useState(false);
 
   return (
     <div className="flex flex-col items-center">
       <h2 className="text-3xl text-orange-200 my-8">Pattern Maker</h2>
       <div>
         {fieldArray.map((row, rowNr) => (
-          <div className="flex">
+          <div key={rowNr + "rr"} className="flex">
             <div id={`row-${rowNr}`} key={rowNr} className="flex w-full">
               {row.map((cell, colNr) => (
                 <div
@@ -38,8 +40,8 @@ export const Pattern = () => {
       </div>
       <button
         onClick={() => {
-          console.log(fieldArray);
           window.localStorage.setItem("pattern", JSON.stringify(fieldArray));
+          setShowPattern(true);
         }}
         className="hover:text-amber-500 my-2"
       >
@@ -51,11 +53,14 @@ export const Pattern = () => {
           onClick={() => {
             const fieldString = JSON.stringify(patternField);
             setFieldArray(JSON.parse(fieldString));
+            setShowPattern(false);
           }}
         >
           Clear
         </button>
       </div>
+
+      {showPattern && <SvgGenerator />}
     </div>
   );
 };
