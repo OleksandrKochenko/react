@@ -1,9 +1,6 @@
-const SvgGenerator = () => {
-  // SVG Data
-  const data = JSON.parse(window.localStorage.getItem("pattern"));
-
+const SvgGenerator = ({ data }) => {
   // SVG Settings
-  const squareSize = 3; // Size of each square in the grid
+  const squareSize = 1.8; // Size of each square in the grid
   const width = 41; // Number of squares per row
   const height = data.length; // Number of rows (based on data length)
 
@@ -12,7 +9,6 @@ const SvgGenerator = () => {
       width={squareSize * width}
       height={squareSize * height}
       xmlns="http://www.w3.org/2000/svg"
-      className="mt-2"
     >
       {data.map((row, y) =>
         row.map((value, x) => {
