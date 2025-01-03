@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import ConfettiExplosion from "react-confetti-explosion";
 import { ticTacToeField, winCombinations } from "./data";
 
 export const TicTacToe = () => {
@@ -35,6 +36,24 @@ export const TicTacToe = () => {
   return (
     <div className="flex flex-col items-center">
       <h2 className="text-3xl text-orange-200 my-8">Tic-Tac-Toe</h2>
+      {winner && (
+        <ConfettiExplosion
+          duration={2500}
+          particleSize={7}
+          particleCount={150}
+          colors={[
+            "#F59E0B",
+            "#0B62F5",
+            "#A5B4FC",
+            "#FCEDA5",
+            "#15803D",
+            "#801558",
+            "#8B5CF6",
+            "#EC4899",
+            "#F43F5E",
+          ]}
+        />
+      )}
       <p className="my-4 text-xl">
         {winner ? (
           <span>
