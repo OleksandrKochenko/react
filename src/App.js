@@ -10,6 +10,7 @@ import { DigitalClock } from "./DigitalClock";
 import { TicTacToe } from "./TicTacToe";
 import { Pattern } from "./Pattern";
 import { Stopwatch } from "./Stopwatch";
+import { TransferList } from "./TransferList";
 
 import "./App.css";
 
@@ -36,6 +37,8 @@ function App() {
       <Pattern />
       <Divider />
       <Stopwatch />
+      <Divider />
+      <TransferList />
       <Divider />
     </div>
   );

@@ -47,16 +47,16 @@ export const Stopwatch = () => {
         <span className="text-3xl text-amber-400">:</span>
         <span className="text-3xl text-amber-400">{deciseconds}</span>
       </div>
-      <div className="flex">
+      <div className="flex items-center mt-6">
         <button
           onClick={isRunning ? stop : start}
-          className="w-24 border rounded-lg p-4 hover:text-amber-500 hover:border-amber-500 mx-2 mt-6"
+          className="w-24 h-fit py-3 border rounded-lg hover:text-amber-500 hover:border-amber-500 mx-1"
         >
           {isRunning ? "Stop" : "Start"}
         </button>
         <button
           onClick={reset}
-          className="w-24 border rounded-lg p-4 hover:text-amber-500 hover:border-amber-500 mx-2 mt-6"
+          className="w-24 h-fit py-3 border rounded-lg hover:text-amber-500 hover:border-amber-500 mx-1"
         >
           Reset
         </button>

@@ -832,3 +832,54 @@ export const patterns = [
     ],
   ],
 ];
+
+export const transferibleList = [
+  {
+    id: "9276dcbe50154f45919d826aa025c169",
+    name: "HTML",
+    position: "left",
+    transferible: false,
+  },
+  {
+    id: "37c361eb108748fbb71c1296c894ecd5",
+    name: "JavaScript",
+    position: "left",
+    transferible: false,
+  },
+  {
+    id: "4f3f0ac07ba6480693e8a1a28d78eee7",
+    name: "CSS",
+    position: "left",
+    transferible: false,
+  },
+  {
+    id: "3e68ce53836e49948df96df572f3524a",
+    name: "TypeScript",
+    position: "left",
+    transferible: false,
+  },
+  {
+    id: "55308e8467734c0dbba744acfc9f836c",
+    name: "React",
+    position: "right",
+    transferible: false,
+  },
+  {
+    id: "1635c2ace8d74e35ad5940ba129b45cc",
+    name: "Angular",
+    position: "right",
+    transferible: false,
+  },
+  {
+    id: "4e6a5d72d1b24a63aea6b8f31597576a",
+    name: "Vue",
+    position: "right",
+    transferible: false,
+  },
+  {
+    id: "81b455918cf34ee3884aa7e7077c250d",
+    name: "Svelte",
+    position: "right",
+    transferible: false,
+  },
+];
