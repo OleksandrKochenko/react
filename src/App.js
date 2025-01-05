@@ -9,6 +9,7 @@ import { TrafficLite } from "./TrafficLite";
 import { DigitalClock } from "./DigitalClock";
 import { TicTacToe } from "./TicTacToe";
 import { Pattern } from "./Pattern";
+import { Stopwatch } from "./Stopwatch";
 
 import "./App.css";
 
@@ -33,6 +34,8 @@ function App() {
       <TicTacToe />
       <Divider />
       <Pattern />
+      <Divider />
+      <Stopwatch />
       <Divider />
     </div>
   );
