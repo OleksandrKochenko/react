@@ -883,3 +883,22 @@ export const transferibleList = [
     transferible: false,
   },
 ];
+
+export const correctGrid = [
+  [1, 2, 3, 4],
+  [5, 6, 7, 8],
+  [9, 10, 11, 12],
+  [13, 14, 15, 0],
+];
+export const initialGrid = [
+  [1, 2, 3, 4],
+  [5, 6, 7, 8],
+  [9, 10, 11, 0],
+  [13, 14, 15, 12],
+];
+export const moves = [
+  [-1, 0], // move up (decrease row)
+  [1, 0], // move down (increase row)
+  [0, -1], // move left (decrease column)
+  [0, 1], // move right (increase column)
+];

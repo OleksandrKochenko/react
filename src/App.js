@@ -11,6 +11,8 @@ import { TicTacToe } from "./TicTacToe";
 import { Pattern } from "./Pattern";
 import { Stopwatch } from "./Stopwatch";
 import { TransferList } from "./TransferList";
+import { FifteenPuzzle } from "./FifteenPuzzle";
+import { ProgressBar } from "./ProgressBar";
 
 import "./App.css";
 
@@ -39,6 +41,10 @@ function App() {
       <Stopwatch />
       <Divider />
       <TransferList />
+      <Divider />
+      <FifteenPuzzle />
+      <Divider />
+      <ProgressBar />
       <Divider />
     </div>
   );
