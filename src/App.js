@@ -15,6 +15,9 @@ import { FifteenPuzzle } from "./FifteenPuzzle";
 import { ProgressBar } from "./ProgressBar";
 
 import "./App.css";
+import { BracketsValidator } from "./BracketsValidator";
+import { PalindromValidator } from "./PalindromValidator";
+import { DataMerging } from "./DataMerging";
 
 function App() {
   return (
@@ -45,6 +48,12 @@ function App() {
       <FifteenPuzzle />
       <Divider />
       <ProgressBar />
+      <Divider />
+      <BracketsValidator />
+      <Divider />
+      <PalindromValidator />
+      <Divider />
+      <DataMerging />
       <Divider />
     </div>
   );
