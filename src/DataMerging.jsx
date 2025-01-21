@@ -30,13 +30,13 @@ export const DataMerging = () => {
       <div className="w-3/4 flex text-base justify-center items-start">
         <p className="text-white mr-2 flex flex-col">
           {usersData.map((el, idx) => (
-            <span key={idx}>{JSON.stringify(el, null, 2)}</span>
+            <code key={idx}>{JSON.stringify(el, null, 2)}</code>
           ))}
         </p>
         {mergedData.length && (
           <p className="text-white flex flex-col">
             {mergedData.map((el, idx) => (
-              <span key={idx}>{JSON.stringify(el, null, 2)}</span>
+              <code key={idx}>{JSON.stringify(el, null, 2)}</code>
             ))}
           </p>
         )}
