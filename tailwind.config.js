@@ -7,6 +7,23 @@ module.exports = {
         inset:
           "inset 3px 3px 3px rgba(255, 255, 255, 0.213), inset -3px -3px 3px rgba(4, 59, 88, 0.532), 12px 12px 24px rgba(0, 0, 0, 0.6)",
       },
+      animation: {
+        "shift-up": "up 1000ms linear infinite",
+        "shift-up-once": "up 1000ms linear 1",
+      },
+      keyframes: {
+        up: {
+          "0%": {
+            transform: "translateY(0px)",
+          },
+          "50%": {
+            transform: "translateY(0px)",
+          },
+          "100%": {
+            transform: "translateY(-50px)",
+          },
+        },
+      },
     },
   },
   plugins: [],

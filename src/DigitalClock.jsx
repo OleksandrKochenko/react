@@ -58,7 +58,7 @@ const Character = ({ chars }) => {
   );
 };
 
-const Dots = () => {
+export const Dots = () => {
   return (
     <div className="mx-2">
       <div className={`w-4 h-4 rounded-full mb-2 bg-white`}></div>
@@ -67,20 +67,20 @@ const Dots = () => {
   );
 };
 
+export const getCurrentTime = () => {
+  let time = "";
+  const timeData = new Date();
+  const hours = timeData.getHours();
+  time = time + (hours < 10 ? "0" + hours : hours.toString());
+  const minutes = timeData.getMinutes();
+  time = time + (minutes < 10 ? "0" + minutes : minutes.toString());
+  const seconds = timeData.getSeconds();
+  time = time + (seconds < 10 ? "0" + seconds : seconds.toString());
+  return time.split("").map(Number);
+};
+
 export const DigitalClock = () => {
   const [time, setTime] = useState([0, 0, 0, 0, 0, 0]);
-
-  const getCurrentTime = () => {
-    let time = "";
-    const timeData = new Date();
-    const hours = timeData.getHours();
-    time = time + (hours < 10 ? "0" + hours : hours.toString());
-    const minutes = timeData.getMinutes();
-    time = time + (minutes < 10 ? "0" + minutes : minutes.toString());
-    const seconds = timeData.getSeconds();
-    time = time + (seconds < 10 ? "0" + seconds : seconds.toString());
-    return time.split("").map(Number);
-  };
 
   useEffect(() => {
     const interval = setInterval(() => {

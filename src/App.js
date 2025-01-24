@@ -13,11 +13,12 @@ import { Stopwatch } from "./Stopwatch";
 import { TransferList } from "./TransferList";
 import { FifteenPuzzle } from "./FifteenPuzzle";
 import { ProgressBar } from "./ProgressBar";
-
-import "./App.css";
 import { BracketsValidator } from "./BracketsValidator";
 import { PalindromValidator } from "./PalindromValidator";
 import { DataMerging } from "./DataMerging";
+// import { Parent } from "./Parent";
+import { ClockAnimation } from "./ClockAnimation";
+import "./App.css";
 
 function App() {
   return (
@@ -54,6 +55,10 @@ function App() {
       <PalindromValidator />
       <Divider />
       <DataMerging />
+      <Divider />
+      {/* <Parent /> */}
+      {/* <Divider /> */}
+      <ClockAnimation />
       <Divider />
     </div>
   );
