@@ -15,6 +15,7 @@ export const ClockAnimation = () => {
   }, []);
 
   const [hour1, hour2, min1, min2, sec1, sec2] = [0, 1, 2, 3, 4, 5, 6];
+  console.log(hour1, hour2);
 
   return (
     <div className="w-full flex flex-col items-center">
