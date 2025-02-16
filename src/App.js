@@ -24,6 +24,9 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <div>
+        <img src="logo_test.svg" alt="logo test" /> Stage testing
+      </div>
       <Table />
       <Divider />
       <Dices />
